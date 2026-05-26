@@ -1,8 +1,9 @@
 import { Redirect } from 'expo-router';
 
-// Point d'entree de l'app — redirige vers le login pour l'instant.
-// Plus tard, on verifiera ici si l'utilisateur est connecte
-// pour rediriger vers le home ou le login.
+// Point d'entree de l'app.
+// Pour l'instant, redirige toujours vers le login.
+// Plus tard, on verifiera si l'utilisateur est deja connecte
+// pour l'envoyer vers le home au lieu du login.
 export default function Index() {
   return <Redirect href="/(auth)/login" />;
 }

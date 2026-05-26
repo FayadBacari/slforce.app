@@ -1,65 +1,92 @@
 /**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
+ * Design System SLForce
+ * ---------------------
+ * Toutes les valeurs visuelles de l'app sont ici.
+ * Extraites des maquettes Figma.
  */
 
-import '@/global.css';
-
-import { Platform } from 'react-native';
+// ─── COULEURS ────────────────────────────────────────────────
 
 export const Colors = {
-  light: {
-    text: '#000000',
-    background: '#ffffff',
-    backgroundElement: '#F0F0F3',
-    backgroundSelected: '#E0E1E6',
-    textSecondary: '#60646C',
-  },
-  dark: {
-    text: '#ffffff',
-    background: '#000000',
-    backgroundElement: '#212225',
-    backgroundSelected: '#2E3135',
-    textSecondary: '#B0B4BA',
-  },
+  // Principales
+  primary: '#3B82F6',
+  primaryDark: '#2563EB',
+  primaryLight: '#EFF6FF',
+
+  // Fonds
+  background: '#FFFFFF',
+  backgroundGray: '#F3F4F6',
+
+  // Textes
+  textPrimary: '#1A1A2E',
+  textSecondary: '#6B7280',
+  textPlaceholder: '#9CA3AF',
+  textWhite: '#FFFFFF',
+
+  // Etats
+  success: '#22C55E',
+  error: '#EF4444',
+  warning: '#F59E0B',
+
+  // Bordures
+  border: '#E5E7EB',
+  borderFocus: '#3B82F6',
+
+  // Ombres
+  shadow: '#000000',
 } as const;
 
-export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
+// ─── TYPOGRAPHIE ─────────────────────────────────────────────
 
-export const Fonts = Platform.select({
-  ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
-  },
-  default: {
-    sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
-    mono: 'monospace',
-  },
-  web: {
-    sans: 'var(--font-display)',
-    serif: 'var(--font-serif)',
-    rounded: 'var(--font-rounded)',
-    mono: 'var(--font-mono)',
-  },
-});
+export const Typography = {
+  h1: { fontSize: 28, fontWeight: '700' as const },
+  h2: { fontSize: 24, fontWeight: '700' as const },
+  h3: { fontSize: 20, fontWeight: '600' as const },
+  body: { fontSize: 16, fontWeight: '400' as const },
+  bodySmall: { fontSize: 14, fontWeight: '400' as const },
+  label: { fontSize: 14, fontWeight: '500' as const },
+  button: { fontSize: 16, fontWeight: '600' as const },
+  link: { fontSize: 14, fontWeight: '600' as const },
+  caption: { fontSize: 12, fontWeight: '400' as const },
+} as const;
+
+// ─── ESPACEMENTS ─────────────────────────────────────────────
 
 export const Spacing = {
-  half: 2,
-  one: 4,
-  two: 8,
-  three: 16,
-  four: 24,
-  five: 32,
-  six: 64,
+  xs: 4,
+  sm: 8,
+  md: 12,
+  lg: 16,
+  xl: 24,
+  xxl: 32,
+  xxxl: 48,
 } as const;
 
-export const BottomTabInset = Platform.select({ ios: 50, android: 80 }) ?? 0;
-export const MaxContentWidth = 800;
+// ─── ARRONDIS ────────────────────────────────────────────────
+
+export const BorderRadius = {
+  sm: 8,
+  md: 12,
+  lg: 16,
+  xl: 20,
+  full: 9999,
+} as const;
+
+// ─── OMBRES ──────────────────────────────────────────────────
+
+export const Shadows = {
+  light: {
+    shadowColor: Colors.shadow,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  medium: {
+    shadowColor: Colors.shadow,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.12,
+    shadowRadius: 8,
+    elevation: 4,
+  },
+} as const;

@@ -1,0 +1,78 @@
+/**
+ * Styles de l'ecran d'inscription (RegisterScreen).
+ * BEM : register = bloc.
+ */
+
+import { StyleSheet } from 'react-native';
+import { Colors, Typography, Spacing, BorderRadius } from '@/shared/theme/theme';
+
+export const styles = StyleSheet.create({
+  register: {
+    flex: 1,
+    backgroundColor: Colors.background,
+  },
+  register__scroll: {
+    flexGrow: 1,
+    padding: Spacing.xl,
+    paddingTop: Spacing.xxxl,
+  },
+
+  // --- En-tete ---
+  register__header: {
+    alignItems: 'center',
+    marginBottom: Spacing.xxl,
+  },
+  register__logo: {
+    width: 120,
+    height: 120,
+    borderRadius: BorderRadius.xl,
+    backgroundColor: Colors.primary,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: Spacing.lg,
+  },
+  register__logoImage: {
+    width: 110,
+    height: 110,
+    resizeMode: 'contain',
+  },
+  register__title: {
+    ...Typography.h1,
+    color: Colors.textPrimary,
+  },
+  register__role: {
+    ...Typography.body,
+    color: Colors.primary,
+    marginTop: Spacing.xs,
+  },
+
+  // --- Formulaire ---
+  register__form: {
+    gap: Spacing.lg,
+  },
+  register__row: {
+    flexDirection: 'row',
+    gap: Spacing.md,
+  },
+  register__halfInput: {
+    flex: 1,
+  },
+
+  // --- Pied de page ---
+  register__footer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: Spacing.xxl,
+    paddingBottom: Spacing.xxl,
+    gap: Spacing.xs,
+  },
+  register__footerText: {
+    ...Typography.bodySmall,
+    color: Colors.textSecondary,
+  },
+  register__footerLink: {
+    ...Typography.link,
+    color: Colors.primary,
+    textDecorationLine: 'underline',
+  },
+});
