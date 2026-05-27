@@ -1,20 +1,17 @@
-/**
- * Styles de l'ecran d'onboarding (athlete + coach).
- * BEM : onboarding = bloc.
- */
-
+// import all dependencies
 import { StyleSheet } from 'react-native';
 import { Colors, Typography, Spacing, BorderRadius } from '@/shared/theme/theme';
 
+
 export const styles = StyleSheet.create({
-  // --- Bloc principal ---
+  // --- Main block ---
   onboarding: {
     flex: 1,
     backgroundColor: Colors.background,
     padding: Spacing.xl,
   },
 
-  // --- Barre de progression (pleine largeur) ---
+  // --- Progress bar (full width) ---
   onboarding__progressBar: {
     height: 5,
     backgroundColor: Colors.primaryLight,
@@ -27,7 +24,7 @@ export const styles = StyleSheet.create({
     borderRadius: 3,
   },
 
-  // --- Indicateur d'etape (ex: "3 / 9") ---
+  // --- Step indicator (e.g. "3 / 9") ---
   onboarding__step: {
     ...Typography.bodySmall,
     color: Colors.primary,
@@ -35,14 +32,14 @@ export const styles = StyleSheet.create({
     marginTop: Spacing.sm,
   },
 
-  // --- Contenu central ---
+  // --- Main content ---
   onboarding__content: {
     flex: 1,
     alignItems: 'center',
     paddingTop: Spacing.xxl,
   },
 
-  // --- Icone en haut ---
+  // --- Top icon ---
   onboarding__iconContainer: {
     width: 80,
     height: 80,
@@ -56,7 +53,7 @@ export const styles = StyleSheet.create({
     fontSize: 40,
   },
 
-  // --- Titre + sous-titre ---
+  // --- Title + subtitle ---
   onboarding__title: {
     ...Typography.h1,
     color: Colors.textPrimary,
@@ -70,13 +67,13 @@ export const styles = StyleSheet.create({
     paddingHorizontal: Spacing.lg,
   },
 
-  // --- Input texte (pseudo) ---
+  // --- Text input (username) ---
   onboarding__textInput: {
     width: '100%',
     marginTop: Spacing.xxl,
   },
 
-  // --- Input numerique (poids, taille, records) ---
+  // --- Number input (weight, height, records) ---
   onboarding__numberRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -106,7 +103,7 @@ export const styles = StyleSheet.create({
     color: Colors.textSecondary,
   },
 
-  // --- Choix (genre : Homme / Femme) ---
+  // --- Choice (gender: Male / Female) ---
   onboarding__choices: {
     flexDirection: 'row',
     gap: Spacing.md,
@@ -135,7 +132,7 @@ export const styles = StyleSheet.create({
     color: Colors.textPrimary,
   },
 
-  // --- Chips (categories de poids) ---
+  // --- Chips (weight categories) ---
   onboarding__chips: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -163,7 +160,7 @@ export const styles = StyleSheet.create({
     color: Colors.textWhite,
   },
 
-  // --- Textarea (presentation coach) ---
+  // --- Textarea (coach bio) ---
   onboarding__textareaContainer: {
     width: '100%',
     marginTop: Spacing.xxl,
@@ -182,7 +179,7 @@ export const styles = StyleSheet.create({
     borderColor: Colors.borderFocus,
   },
 
-  // --- Compteur (textarea / multi-chips) ---
+  // --- Counter (textarea / multi-chips) ---
   onboarding__counter: {
     ...Typography.caption,
     color: Colors.primary,
@@ -190,7 +187,7 @@ export const styles = StyleSheet.create({
     marginTop: Spacing.sm,
   },
 
-  // --- Pied de page (boutons Retour / Suivant) ---
+  // --- Footer (Back / Next buttons) ---
   onboarding__footer: {
     flexDirection: 'row',
     gap: Spacing.md,

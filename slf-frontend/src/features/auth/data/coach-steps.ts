@@ -1,7 +1,4 @@
-/**
- * Configuration des 7 etapes d'onboarding coach.
- */
-
+// import all dependencies
 import { OnboardingStep } from './onboarding-types';
 
 export const COACH_STEPS: OnboardingStep[] = [

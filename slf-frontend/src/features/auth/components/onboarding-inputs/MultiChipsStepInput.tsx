@@ -1,7 +1,4 @@
-/**
- * Pastilles multi-selection avec limite pour l'onboarding (disciplines).
- */
-
+// import all dependencies
 import { View, Text, Pressable } from 'react-native';
 import { StepOption } from '@/features/auth/data/onboarding-types';
 import { styles } from '@/features/auth/styles/onboarding.styles';
@@ -13,8 +10,9 @@ type Props = {
   maxSelect?: number;
 };
 
+
 export default function MultiChipsStepInput({ value, onChange, options, maxSelect = 2 }: Props) {
-  // Transforme la valeur en tableau
+  // Converts value string to array
   const selected = value ? value.split(',') : [];
 
   const toggleChip = (label: string) => {

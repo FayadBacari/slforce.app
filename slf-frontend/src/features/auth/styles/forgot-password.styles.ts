@@ -1,10 +1,7 @@
-/**
- * Styles de l'ecran mot de passe oublie (ForgotPasswordScreen).
- * BEM : forgot = bloc.
- */
-
+// import all dependencies
 import { StyleSheet } from 'react-native';
 import { Colors, Typography, Spacing, BorderRadius } from '@/shared/theme/theme';
+
 
 export const styles = StyleSheet.create({
   forgot: {
@@ -17,7 +14,7 @@ export const styles = StyleSheet.create({
     padding: Spacing.xl,
   },
 
-  // --- En-tete ---
+  // --- Header ---
   forgot__header: {
     alignItems: 'center',
     marginBottom: Spacing.xxl,
@@ -47,12 +44,12 @@ export const styles = StyleSheet.create({
     marginTop: Spacing.sm,
   },
 
-  // --- Formulaire ---
+  // --- Form ---
   forgot__form: {
     gap: Spacing.lg,
   },
 
-  // --- Pied de page ---
+  // --- Footer ---
   forgot__footer: {
     flexDirection: 'row',
     justifyContent: 'center',

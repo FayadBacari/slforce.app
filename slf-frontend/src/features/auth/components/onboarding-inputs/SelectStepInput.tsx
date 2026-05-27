@@ -1,7 +1,4 @@
-/**
- * Champ texte + pastilles pre-remplies pour l'onboarding (specialite).
- */
-
+// import all dependencies
 import { View, Text, Pressable } from 'react-native';
 import AppTextInput from '@/shared/components/AppTextInput';
 import { StepOption } from '@/features/auth/data/onboarding-types';
@@ -13,6 +10,7 @@ type Props = {
   placeholder?: string;
   options?: StepOption[];
 };
+
 
 export default function SelectStepInput({ value, onChange, placeholder, options }: Props) {
   return (

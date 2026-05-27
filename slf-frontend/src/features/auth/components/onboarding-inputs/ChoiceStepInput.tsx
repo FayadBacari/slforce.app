@@ -1,7 +1,4 @@
-/**
- * Boutons de choix unique en ligne pour l'onboarding (genre).
- */
-
+// import all dependencies
 import { View, Text, Pressable } from 'react-native';
 import { StepOption } from '@/features/auth/data/onboarding-types';
 import { styles } from '@/features/auth/styles/onboarding.styles';

@@ -1,20 +1,20 @@
-/**
- * Ecran d'inscription.
- * L'utilisateur remplit ses infos pour creer un compte.
- * Le role (athlete/coach) est passe en parametre depuis role-select.
- */
-
+// import all assets
+import { LOGO } from '@/shared/constants/images';
 import { useState } from 'react';
-import { View, Text, ScrollView, Pressable, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router, useLocalSearchParams } from 'expo-router';
+import { View, Text, ScrollView, Pressable, Image } from 'react-native';
+
+// import all components
 import AppButton from '@/shared/components/AppButton';
 import AppTextInput from '@/shared/components/AppTextInput';
-import { LOGO } from '@/shared/constants/images';
+
+// import styles
 import { styles } from '@/features/auth/styles/register.styles';
 
+
 export default function RegisterScreen() {
-  // Recupere le role choisi depuis l'ecran precedent
+  // Gets the role chosen from the previous screen
   const { role } = useLocalSearchParams<{ role: string }>();
 
   const [firstName, setFirstName] = useState('');
@@ -23,7 +23,7 @@ export default function RegisterScreen() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  // Affiche le role en francais
+  // Displays the role label in French
   const roleLabel = role === 'coach' ? 'Coach' : 'Athlète';
 
   return (
@@ -32,7 +32,7 @@ export default function RegisterScreen() {
         contentContainerStyle={styles.register__scroll}
         keyboardShouldPersistTaps="handled"
       >
-        {/* En-tete : logo + titre + role */}
+        {/* Header: logo + title + role */}
         <View style={styles.register__header}>
           <View style={styles.register__logo}>
             <Image
@@ -44,9 +44,9 @@ export default function RegisterScreen() {
           <Text style={styles.register__role}>{roleLabel}</Text>
         </View>
 
-        {/* Formulaire */}
+        {/* Form */}
         <View style={styles.register__form}>
-          {/* Prenom et Nom cote a cote */}
+          {/* First name and last name side by side */}
           <View style={styles.register__row}>
             <View style={styles.register__halfInput}>
               <AppTextInput
@@ -93,7 +93,7 @@ export default function RegisterScreen() {
           <AppButton
             title="S'inscrire"
             onPress={() => {
-              // Redirige vers l'onboarding du bon role
+              // Redirects to the correct role onboarding
               if (role === 'coach') {
                 router.push('/(auth)/onboarding-coach');
               } else {
@@ -103,7 +103,7 @@ export default function RegisterScreen() {
           />
         </View>
 
-        {/* Lien vers connexion */}
+        {/* Link to login */}
         <View style={styles.register__footer}>
           <Text style={styles.register__footerText}>
             {'Déjà un compte ?'}

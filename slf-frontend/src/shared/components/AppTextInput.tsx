@@ -1,16 +1,9 @@
-/**
- * AppTextInput — Champ de saisie reutilisable.
- *
- * Exemples :
- *   <AppTextInput label="Email" value={email} onChangeText={setEmail} />
- *   <AppTextInput label="Mot de passe" value={pw} onChangeText={setPw} secureTextEntry />
- */
-
-import { useState } from 'react';
-import { View, Text, TextInput, Pressable, KeyboardTypeOptions } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+// import all dependencies
 import { Colors } from '@/shared/theme/theme';
 import { styles } from './app-text-input.styles';
+import { useState } from 'react';
+import { Ionicons } from '@expo/vector-icons';
+import { View, Text, TextInput, Pressable, KeyboardTypeOptions } from 'react-native';
 
 type AppTextInputProps = {
   label?: string;
@@ -23,6 +16,7 @@ type AppTextInputProps = {
   autoCapitalize?: 'none' | 'sentences' | 'words' | 'characters';
 };
 
+
 export default function AppTextInput({
   label,
   placeholder,
@@ -33,18 +27,18 @@ export default function AppTextInput({
   keyboardType,
   autoCapitalize = 'none',
 }: AppTextInputProps) {
-  // Gere le focus du champ (bordure bleue)
+  // Handles field focus (blue border)
   const [isFocused, setIsFocused] = useState(false);
 
-  // Gere la visibilite du mot de passe
+  // Handles password visibility toggle
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   return (
     <View style={styles.input}>
-      {/* Label au-dessus du champ */}
+      {/* Label above the field */}
       {label ? <Text style={styles.input__label}>{label}</Text> : null}
 
-      {/* Champ de saisie avec bordure */}
+      {/* Input field with border */}
       <View
         style={[
           styles.input__field,
@@ -65,7 +59,7 @@ export default function AppTextInput({
           onBlur={() => setIsFocused(false)}
         />
 
-        {/* Icone oeil pour les mots de passe */}
+        {/* Eye icon for password fields */}
         {secureTextEntry && (
           <Pressable
             onPress={() => setIsPasswordVisible(!isPasswordVisible)}
@@ -80,7 +74,7 @@ export default function AppTextInput({
         )}
       </View>
 
-      {/* Message d'erreur */}
+      {/* Error message */}
       {error ? <Text style={styles.input__error}>{error}</Text> : null}
     </View>
   );

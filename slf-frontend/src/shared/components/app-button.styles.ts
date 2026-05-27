@@ -1,10 +1,7 @@
-/**
- * Styles du composant AppButton.
- * BEM : button = bloc, __text = element, --pressed/--disabled = modificateurs.
- */
-
+// import all dependencies
 import { StyleSheet } from 'react-native';
 import { Colors, Typography, BorderRadius, Spacing } from '@/shared/theme/theme';
+
 
 export const styles = StyleSheet.create({
   button: {
@@ -24,7 +21,7 @@ export const styles = StyleSheet.create({
   },
 });
 
-// Chaque variante a ses propres couleurs
+// Each variant has its own colors
 export const variantStyles = {
   primary: StyleSheet.create({
     button: { backgroundColor: Colors.primary },
@@ -45,7 +42,7 @@ export const variantStyles = {
     'button--pressed': { backgroundColor: Colors.primaryLight },
     button__text: { color: Colors.primary },
   }),
-  // Bouton discret — fond blanc, bordure grise (ex: bouton Retour)
+  // Subtle button — white background, gray border (e.g. Back button)
   ghost: StyleSheet.create({
     button: {
       backgroundColor: Colors.background,

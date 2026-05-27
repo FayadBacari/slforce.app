@@ -1,24 +1,21 @@
-/**
- * Styles du composant AppTextInput.
- * BEM : input = bloc, __label/__field/__error = elements.
- */
-
+// import all dependencies
 import { StyleSheet } from 'react-native';
 import { Colors, Typography, BorderRadius, Spacing } from '@/shared/theme/theme';
 
+
 export const styles = StyleSheet.create({
-  // Bloc — conteneur global
+  // Block — global container
   input: {
     gap: Spacing.sm,
   },
 
-  // Element — le label au-dessus du champ
+  // Element — label above the field
   input__label: {
     ...Typography.label,
     color: Colors.textPrimary,
   },
 
-  // Element — le conteneur du champ (bordure + fond)
+  // Element — field container (border + background)
   input__field: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -30,29 +27,29 @@ export const styles = StyleSheet.create({
     backgroundColor: Colors.background,
   },
 
-  // Modificateur — champ actif (focus)
+  // Modifier — active field (focus)
   'input__field--focused': {
     borderColor: Colors.borderFocus,
   },
 
-  // Modificateur — champ en erreur
+  // Modifier — error state
   'input__field--error': {
     borderColor: Colors.error,
   },
 
-  // Element — le TextInput natif a l'interieur
+  // Element — native TextInput inside
   input__textInput: {
     flex: 1,
     ...Typography.body,
     color: Colors.textPrimary,
   },
 
-  // Element — bouton oeil pour mot de passe
+  // Element — eye button for password
   input__eyeButton: {
     padding: Spacing.xs,
   },
 
-  // Element — message d'erreur sous le champ
+  // Element — error message below the field
   input__error: {
     ...Typography.caption,
     color: Colors.error,

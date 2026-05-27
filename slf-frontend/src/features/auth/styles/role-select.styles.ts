@@ -1,10 +1,7 @@
-/**
- * Styles de l'ecran de selection de role (RoleSelectScreen).
- * BEM : roleSelect = bloc.
- */
-
+// import all dependencies
 import { StyleSheet } from 'react-native';
 import { Colors, Typography, Spacing, BorderRadius, Shadows } from '@/shared/theme/theme';
+
 
 export const styles = StyleSheet.create({
   roleSelect: {
@@ -17,7 +14,7 @@ export const styles = StyleSheet.create({
     padding: Spacing.xl,
   },
 
-  // --- En-tete ---
+  // --- Header ---
   roleSelect__header: {
     alignItems: 'center',
     marginBottom: Spacing.xxl,
@@ -48,7 +45,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: Spacing.lg,
   },
 
-  // --- Cartes de choix ---
+  // --- Role choice cards ---
   roleSelect__cards: {
     gap: Spacing.lg,
   },
@@ -80,7 +77,7 @@ export const styles = StyleSheet.create({
     marginTop: Spacing.xs,
   },
 
-  // --- Pied de page ---
+  // --- Footer ---
   roleSelect__footer: {
     flexDirection: 'row',
     justifyContent: 'center',

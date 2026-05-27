@@ -1,16 +1,12 @@
-/**
- * Ecran de selection de role.
- * L'utilisateur choisit s'il est Athlete ou Coach avant l'inscription.
- */
-
-import { View, Text, ScrollView, Pressable, Image } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { router } from 'expo-router';
+// import all dependencies
 import { LOGO } from '@/shared/constants/images';
 import { styles } from '@/features/auth/styles/role-select.styles';
+import { router } from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { View, Text, ScrollView, Pressable, Image } from 'react-native';
 
 export default function RoleSelectScreen() {
-  // Navigue vers l'inscription avec le role choisi
+  // Navigates to registration with the chosen role
   const handleSelectRole = (role: 'athlete' | 'coach') => {
     router.push({ pathname: '/(auth)/register', params: { role } });
   };
@@ -18,7 +14,7 @@ export default function RoleSelectScreen() {
   return (
     <SafeAreaView style={styles.roleSelect}>
       <ScrollView contentContainerStyle={styles.roleSelect__scroll}>
-        {/* En-tete : logo + titre */}
+        {/* Header: logo + title */}
         <View style={styles.roleSelect__header}>
           <View style={styles.roleSelect__logo}>
             <Image
@@ -32,9 +28,9 @@ export default function RoleSelectScreen() {
           </Text>
         </View>
 
-        {/* Cartes de choix */}
+        {/* Choice cards */}
         <View style={styles.roleSelect__cards}>
-          {/* Carte Athlete */}
+          {/* Athlete card */}
           <Pressable
             style={({ pressed }) => [
               styles.roleSelect__card,
@@ -51,7 +47,7 @@ export default function RoleSelectScreen() {
             </View>
           </Pressable>
 
-          {/* Carte Coach */}
+          {/* Coach card */}
           <Pressable
             style={({ pressed }) => [
               styles.roleSelect__card,
@@ -69,7 +65,7 @@ export default function RoleSelectScreen() {
           </Pressable>
         </View>
 
-        {/* Lien vers connexion */}
+        {/* Link to login */}
         <View style={styles.roleSelect__footer}>
           <Text style={styles.roleSelect__footerText}>
             {'Déjà un compte ?'}

@@ -1,8 +1,8 @@
 import { Stack } from 'expo-router';
 
-// Layout du groupe auth.
-// Tous les ecrans (login, register, etc.) sont empiles dans cette stack.
-// L'animation "slide_from_right" donne un effet de glissement naturel.
+// Auth group layout.
+// All screens (login, register, etc.) are stacked in this stack.
+// The "slide_from_right" animation gives a natural sliding effect.
 export default function AuthLayout() {
   return (
     <Stack

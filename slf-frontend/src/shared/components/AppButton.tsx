@@ -1,14 +1,7 @@
-/**
- * AppButton — Bouton reutilisable.
- *
- * Exemples :
- *   <AppButton title="Se connecter" onPress={handleLogin} />
- *   <AppButton title="Annuler" variant="secondary" onPress={handleCancel} />
- */
-
-import { Pressable, Text, ActivityIndicator } from 'react-native';
+// import all dependencies
 import { Colors } from '@/shared/theme/theme';
 import { styles, variantStyles } from './app-button.styles';
+import { Pressable, Text, ActivityIndicator } from 'react-native';
 
 type AppButtonProps = {
   title: string;
@@ -17,6 +10,7 @@ type AppButtonProps = {
   loading?: boolean;
   disabled?: boolean;
 };
+
 
 export default function AppButton({
   title,

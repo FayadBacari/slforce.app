@@ -1,7 +1,4 @@
-/**
- * Pastilles a choix unique pour l'onboarding (categorie de poids).
- */
-
+// import all dependencies
 import { View, Text, Pressable } from 'react-native';
 import { StepOption } from '@/features/auth/data/onboarding-types';
 import { styles } from '@/features/auth/styles/onboarding.styles';
@@ -11,6 +8,7 @@ type Props = {
   onChange: (v: string) => void;
   options?: StepOption[];
 };
+
 
 export default function ChipsStepInput({ value, onChange, options }: Props) {
   return (

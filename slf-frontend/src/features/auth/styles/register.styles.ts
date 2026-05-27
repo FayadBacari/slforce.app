@@ -1,10 +1,7 @@
-/**
- * Styles de l'ecran d'inscription (RegisterScreen).
- * BEM : register = bloc.
- */
-
+// import all dependencies
 import { StyleSheet } from 'react-native';
 import { Colors, Typography, Spacing, BorderRadius } from '@/shared/theme/theme';
+
 
 export const styles = StyleSheet.create({
   register: {
@@ -17,7 +14,7 @@ export const styles = StyleSheet.create({
     paddingTop: Spacing.xxxl,
   },
 
-  // --- En-tete ---
+  // --- Header ---
   register__header: {
     alignItems: 'center',
     marginBottom: Spacing.xxl,
@@ -46,7 +43,7 @@ export const styles = StyleSheet.create({
     marginTop: Spacing.xs,
   },
 
-  // --- Formulaire ---
+  // --- Form ---
   register__form: {
     gap: Spacing.lg,
   },
@@ -58,7 +55,7 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
 
-  // --- Pied de page ---
+  // --- Footer ---
   register__footer: {
     flexDirection: 'row',
     justifyContent: 'center',

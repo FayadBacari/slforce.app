@@ -1,42 +1,33 @@
-/**
- * Design System SLForce
- * ---------------------
- * Toutes les valeurs visuelles de l'app sont ici.
- * Extraites des maquettes Figma.
- */
-
-// ─── COULEURS ────────────────────────────────────────────────
-
 export const Colors = {
-  // Principales
+  // Primary
   primary: '#3B82F6',
   primaryDark: '#2563EB',
   primaryLight: '#EFF6FF',
 
-  // Fonds
+  // Backgrounds
   background: '#FFFFFF',
   backgroundGray: '#F3F4F6',
 
-  // Textes
+  // Text
   textPrimary: '#1A1A2E',
   textSecondary: '#6B7280',
   textPlaceholder: '#9CA3AF',
   textWhite: '#FFFFFF',
 
-  // Etats
+  // States
   success: '#22C55E',
   error: '#EF4444',
   warning: '#F59E0B',
 
-  // Bordures
+  // Borders
   border: '#E5E7EB',
   borderFocus: '#3B82F6',
 
-  // Ombres
+  // Shadows
   shadow: '#000000',
 } as const;
 
-// ─── TYPOGRAPHIE ─────────────────────────────────────────────
+// ─── TYPOGRAPHY ──────────────────────────────────────────────
 
 export const Typography = {
   h1: { fontSize: 28, fontWeight: '700' as const },
@@ -50,7 +41,7 @@ export const Typography = {
   caption: { fontSize: 12, fontWeight: '400' as const },
 } as const;
 
-// ─── ESPACEMENTS ─────────────────────────────────────────────
+// ─── SPACING ─────────────────────────────────────────────────
 
 export const Spacing = {
   xs: 4,
@@ -62,7 +53,7 @@ export const Spacing = {
   xxxl: 48,
 } as const;
 
-// ─── ARRONDIS ────────────────────────────────────────────────
+// ─── BORDER RADIUS ───────────────────────────────────────────
 
 export const BorderRadius = {
   sm: 8,
@@ -72,7 +63,7 @@ export const BorderRadius = {
   full: 9999,
 } as const;
 
-// ─── OMBRES ──────────────────────────────────────────────────
+// ─── SHADOWS ─────────────────────────────────────────────────
 
 export const Shadows = {
   light: {

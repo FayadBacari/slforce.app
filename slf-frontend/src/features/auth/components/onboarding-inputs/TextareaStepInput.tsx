@@ -1,7 +1,4 @@
-/**
- * Zone de texte multi-lignes pour l'onboarding (presentation coach).
- */
-
+// import all dependencies
 import { useState } from 'react';
 import { View, Text, TextInput } from 'react-native';
 import { Colors } from '@/shared/theme/theme';
@@ -13,6 +10,7 @@ type Props = {
   placeholder?: string;
   minLength?: number;
 };
+
 
 export default function TextareaStepInput({ value, onChange, placeholder, minLength }: Props) {
   const [isFocused, setIsFocused] = useState(false);

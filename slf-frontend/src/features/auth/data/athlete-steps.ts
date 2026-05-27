@@ -1,8 +1,6 @@
-/**
- * Configuration des 9 etapes d'onboarding athlete.
- */
-
+// import all dependencies
 import { OnboardingStep } from './onboarding-types';
+
 
 export const ATHLETE_STEPS: OnboardingStep[] = [
   {

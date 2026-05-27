@@ -1,16 +1,17 @@
-/**
- * Ecran mot de passe oublie.
- * L'utilisateur entre son email pour recevoir un lien de reinitialisation.
- */
-
-import { useState } from 'react';
-import { View, Text, ScrollView, Pressable, Image } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+// import all dependencies
+import { LOGO } from '@/shared/constants/images';
 import { router } from 'expo-router';
+import { useState } from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { View, Text, ScrollView, Pressable, Image } from 'react-native';
+
+// import all components
 import AppButton from '@/shared/components/AppButton';
 import AppTextInput from '@/shared/components/AppTextInput';
-import { LOGO } from '@/shared/constants/images';
+
+// import styles
 import { styles } from '@/features/auth/styles/forgot-password.styles';
+
 
 export default function ForgotPasswordScreen() {
   const [email, setEmail] = useState('');
@@ -21,7 +22,7 @@ export default function ForgotPasswordScreen() {
         contentContainerStyle={styles.forgot__scroll}
         keyboardShouldPersistTaps="handled"
       >
-        {/* En-tete : logo + titre */}
+        {/* Header: logo + title */}
         <View style={styles.forgot__header}>
           <View style={styles.forgot__logo}>
             <Image
@@ -35,7 +36,7 @@ export default function ForgotPasswordScreen() {
           </Text>
         </View>
 
-        {/* Formulaire */}
+        {/* Form */}
         <View style={styles.forgot__form}>
           <AppTextInput
             label="Adresse e-mail"
@@ -47,11 +48,11 @@ export default function ForgotPasswordScreen() {
 
           <AppButton
             title="Envoyer le lien"
-            onPress={() => {/* TODO: envoyer email de reinitialisation */}}
+            onPress={() => {/* TODO: send reset email */}}
           />
         </View>
 
-        {/* Lien retour vers connexion */}
+        {/* Back to login link */}
         <View style={styles.forgot__footer}>
           <Text style={styles.forgot__footerText}>
             {'Tu te souviens ?'}

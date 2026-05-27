@@ -1,16 +1,17 @@
-/**
- * Ecran de connexion.
- * L'utilisateur entre son email et mot de passe pour se connecter.
- */
-
-import { useState } from 'react';
-import { View, Text, ScrollView, Pressable, Image } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+// import all dependencies
+import { LOGO } from '@/shared/constants/images';
 import { router } from 'expo-router';
+import { useState } from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { View, Text, ScrollView, Pressable, Image } from 'react-native';
+
+// import all components
 import AppButton from '@/shared/components/AppButton';
 import AppTextInput from '@/shared/components/AppTextInput';
-import { LOGO } from '@/shared/constants/images';
+
+// import styles
 import { styles } from '@/features/auth/styles/login.styles';
+
 
 export default function LoginScreen() {
   const [email, setEmail] = useState('');
@@ -22,7 +23,7 @@ export default function LoginScreen() {
         contentContainerStyle={styles.login__scroll}
         keyboardShouldPersistTaps="handled"
       >
-        {/* En-tete : logo + titre */}
+        {/* Header: logo + title */}
         <View style={styles.login__header}>
           <View style={styles.login__logo}>
             <Image
@@ -34,7 +35,7 @@ export default function LoginScreen() {
           <Text style={styles.login__subtitle}>{'Contente de te revoir !'}</Text>
         </View>
 
-        {/* Formulaire */}
+        {/* Form */}
         <View style={styles.login__form}>
           <AppTextInput
             label="Adresse e-mail"
@@ -52,7 +53,7 @@ export default function LoginScreen() {
             secureTextEntry
           />
 
-          {/* Lien mot de passe oublie */}
+          {/* Forgot password link */}
           <Pressable
             style={styles.login__forgotLink}
             onPress={() => router.push('/(auth)/forgot-password')}
@@ -64,11 +65,11 @@ export default function LoginScreen() {
 
           <AppButton
             title="Se connecter"
-            onPress={() => {/* TODO: connexion au backend */}}
+            onPress={() => {/* TODO: connect to backend */}}
           />
         </View>
 
-        {/* Lien vers inscription */}
+        {/* Link to sign up */}
         <View style={styles.login__footer}>
           <Text style={styles.login__footerText}>
             {'Pas encore de compte ?'}

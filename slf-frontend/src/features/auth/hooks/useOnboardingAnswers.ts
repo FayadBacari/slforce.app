@@ -1,20 +1,17 @@
-/**
- * Hook pour persister les reponses d'onboarding dans AsyncStorage.
- * Si l'utilisateur quitte et revient, ses reponses sont restaurees.
- */
-
+// import all dependencies
 import { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-// Cle de stockage par type d'onboarding
+// Storage key per onboarding type
 const STORAGE_KEY = 'onboarding_answers_';
+
 
 export function useOnboardingAnswers(key: string) {
   const storageKey = STORAGE_KEY + key;
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [loaded, setLoaded] = useState(false);
 
-  // Charge les reponses au montage
+  // Load answers on mount
   useEffect(() => {
     AsyncStorage.getItem(storageKey).then((data) => {
       if (data) setAnswers(JSON.parse(data));
@@ -22,19 +19,19 @@ export function useOnboardingAnswers(key: string) {
     });
   }, [storageKey]);
 
-  // Sauvegarde a chaque changement (apres le chargement initial)
+  // Save on every change (after initial load)
   useEffect(() => {
     if (loaded) {
       AsyncStorage.setItem(storageKey, JSON.stringify(answers));
     }
   }, [answers, loaded, storageKey]);
 
-  // Met a jour une reponse
+  // Updates a single answer
   const setValue = (id: string, value: string) => {
     setAnswers((prev) => ({ ...prev, [id]: value }));
   };
 
-  // Supprime les reponses (apres soumission finale)
+  // Clears all answers (after final submission)
   const clearAnswers = () => {
     setAnswers({});
     AsyncStorage.removeItem(storageKey);

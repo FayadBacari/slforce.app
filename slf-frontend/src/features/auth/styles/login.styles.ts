@@ -1,10 +1,7 @@
-/**
- * Styles de l'ecran Connexion (LoginScreen).
- * BEM : login = bloc.
- */
-
+// import all dependencies
 import { StyleSheet } from 'react-native';
 import { Colors, Typography, Spacing, BorderRadius } from '@/shared/theme/theme';
+
 
 export const styles = StyleSheet.create({
   login: {
@@ -17,7 +14,7 @@ export const styles = StyleSheet.create({
     padding: Spacing.xl,
   },
 
-  // --- En-tete (logo + titre) ---
+  // --- Header (logo + title) ---
   login__header: {
     alignItems: 'center',
     marginBottom: Spacing.xxl,
@@ -46,7 +43,7 @@ export const styles = StyleSheet.create({
     marginTop: Spacing.xs,
   },
 
-  // --- Formulaire ---
+  // --- Form ---
   login__form: {
     gap: Spacing.lg,
   },
@@ -58,7 +55,7 @@ export const styles = StyleSheet.create({
     color: Colors.primary,
   },
 
-  // --- Pied de page ---
+  // --- Footer ---
   login__footer: {
     flexDirection: 'row',
     justifyContent: 'center',
