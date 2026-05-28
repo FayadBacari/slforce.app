@@ -4,13 +4,6 @@ import { Colors, Typography, Spacing, BorderRadius } from '@/shared/theme/theme'
 
 
 export const styles = StyleSheet.create({
-  // --- Main block ---
-  onboarding: {
-    flex: 1,
-    backgroundColor: Colors.background,
-    padding: Spacing.xl,
-  },
-
   // --- Progress bar (full width) ---
   onboarding__progressBar: {
     height: 5,

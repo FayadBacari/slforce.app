@@ -1,13 +1,13 @@
 // import all assets
 import { LOGO } from '@/shared/constants/images';
 import { useState } from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { router, useLocalSearchParams } from 'expo-router';
-import { View, Text, ScrollView, Pressable, Image } from 'react-native';
+import { View, Text, Pressable, Image } from 'react-native';
 
 // import all components
 import AppButton from '@/shared/components/AppButton';
 import AppTextInput from '@/shared/components/AppTextInput';
+import ScreenLayout from '@/shared/components/ScreenLayout';
 
 // import styles
 import { styles } from '@/features/auth/styles/register.styles';
@@ -27,11 +27,7 @@ export default function RegisterScreen() {
   const roleLabel = role === 'coach' ? 'Coach' : 'Athlète';
 
   return (
-    <SafeAreaView style={styles.register}>
-      <ScrollView
-        contentContainerStyle={styles.register__scroll}
-        keyboardShouldPersistTaps="handled"
-      >
+    <ScreenLayout>
         {/* Header: logo + title + role */}
         <View style={styles.register__header}>
           <View style={styles.register__logo}>
@@ -112,7 +108,6 @@ export default function RegisterScreen() {
             <Text style={styles.register__footerLink}>{'Se connecter'}</Text>
           </Pressable>
         </View>
-      </ScrollView>
-    </SafeAreaView>
+    </ScreenLayout>
   );
 }

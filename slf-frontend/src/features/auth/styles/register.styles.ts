@@ -4,19 +4,10 @@ import { Colors, Typography, Spacing, BorderRadius } from '@/shared/theme/theme'
 
 
 export const styles = StyleSheet.create({
-  register: {
-    flex: 1,
-    backgroundColor: Colors.background,
-  },
-  register__scroll: {
-    flexGrow: 1,
-    padding: Spacing.xl,
-    paddingTop: Spacing.xxxl,
-  },
-
   // --- Header ---
   register__header: {
     alignItems: 'center',
+    marginTop: Spacing.xl,
     marginBottom: Spacing.xxl,
   },
   register__logo: {

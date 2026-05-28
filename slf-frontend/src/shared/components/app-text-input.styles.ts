@@ -3,28 +3,25 @@ import { StyleSheet } from 'react-native';
 import { Colors, Typography, BorderRadius, Spacing } from '@/shared/theme/theme';
 
 
+// Floating label offset (moves label above the field)
+export const LABEL_OFFSET = 28;
+
 export const styles = StyleSheet.create({
   // Block — global container
   input: {
-    gap: Spacing.sm,
-  },
-
-  // Element — label above the field
-  input__label: {
-    ...Typography.label,
-    color: Colors.textPrimary,
+    gap: Spacing.xs,
   },
 
   // Element — field container (border + background)
   input__field: {
     flexDirection: 'row',
     alignItems: 'center',
-    height: 48,
+    height: 56,
     borderWidth: 1,
     borderColor: Colors.border,
     borderRadius: BorderRadius.md,
     paddingHorizontal: Spacing.lg,
-    backgroundColor: Colors.background,
+    backgroundColor: Colors.inputBg,
   },
 
   // Modifier — active field (focus)
@@ -37,11 +34,30 @@ export const styles = StyleSheet.create({
     borderColor: Colors.error,
   },
 
+  // Element — floating label (positioned inside the field)
+  input__label: {
+    position: 'absolute',
+    left: Spacing.lg,
+    backgroundColor: 'transparent',
+  },
+
   // Element — native TextInput inside
   input__textInput: {
     flex: 1,
     ...Typography.body,
     color: Colors.textPrimary,
+    paddingTop: Spacing.sm,
+  },
+
+  // Element — right side container (icon, unit, eye)
+  input__right: {
+    paddingLeft: Spacing.sm,
+  },
+
+  // Element — unit text on the right ("kg", "cm")
+  input__unit: {
+    ...Typography.body,
+    color: Colors.textSecondary,
   },
 
   // Element — eye button for password

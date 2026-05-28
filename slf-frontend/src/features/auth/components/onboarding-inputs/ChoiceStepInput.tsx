@@ -9,6 +9,7 @@ type Props = {
   options?: StepOption[];
 };
 
+
 export default function ChoiceStepInput({ value, onChange, options }: Props) {
   return (
     <View style={styles.onboarding__choices}>

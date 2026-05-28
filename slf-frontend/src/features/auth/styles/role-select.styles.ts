@@ -4,16 +4,6 @@ import { Colors, Typography, Spacing, BorderRadius, Shadows } from '@/shared/the
 
 
 export const styles = StyleSheet.create({
-  roleSelect: {
-    flex: 1,
-    backgroundColor: Colors.background,
-  },
-  roleSelect__scroll: {
-    flexGrow: 1,
-    justifyContent: 'center',
-    padding: Spacing.xl,
-  },
-
   // --- Header ---
   roleSelect__header: {
     alignItems: 'center',

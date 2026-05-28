@@ -2,8 +2,10 @@
 import { LOGO } from '@/shared/constants/images';
 import { styles } from '@/features/auth/styles/role-select.styles';
 import { router } from 'expo-router';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { View, Text, ScrollView, Pressable, Image } from 'react-native';
+import { View, Text, Pressable, Image } from 'react-native';
+
+// import all components
+import ScreenLayout from '@/shared/components/ScreenLayout';
 
 export default function RoleSelectScreen() {
   // Navigates to registration with the chosen role
@@ -12,8 +14,7 @@ export default function RoleSelectScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.roleSelect}>
-      <ScrollView contentContainerStyle={styles.roleSelect__scroll}>
+    <ScreenLayout centered>
         {/* Header: logo + title */}
         <View style={styles.roleSelect__header}>
           <View style={styles.roleSelect__logo}>
@@ -74,7 +75,6 @@ export default function RoleSelectScreen() {
             <Text style={styles.roleSelect__footerLink}>{'Se connecter'}</Text>
           </Pressable>
         </View>
-      </ScrollView>
-    </SafeAreaView>
+    </ScreenLayout>
   );
 }

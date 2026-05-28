@@ -4,16 +4,6 @@ import { Colors, Typography, Spacing, BorderRadius } from '@/shared/theme/theme'
 
 
 export const styles = StyleSheet.create({
-  forgot: {
-    flex: 1,
-    backgroundColor: Colors.background,
-  },
-  forgot__scroll: {
-    flexGrow: 1,
-    justifyContent: 'center',
-    padding: Spacing.xl,
-  },
-
   // --- Header ---
   forgot__header: {
     alignItems: 'center',

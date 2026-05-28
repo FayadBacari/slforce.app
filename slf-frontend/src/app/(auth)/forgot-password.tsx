@@ -2,12 +2,12 @@
 import { LOGO } from '@/shared/constants/images';
 import { router } from 'expo-router';
 import { useState } from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { View, Text, ScrollView, Pressable, Image } from 'react-native';
+import { View, Text, Pressable, Image } from 'react-native';
 
 // import all components
 import AppButton from '@/shared/components/AppButton';
 import AppTextInput from '@/shared/components/AppTextInput';
+import ScreenLayout from '@/shared/components/ScreenLayout';
 
 // import styles
 import { styles } from '@/features/auth/styles/forgot-password.styles';
@@ -17,11 +17,7 @@ export default function ForgotPasswordScreen() {
   const [email, setEmail] = useState('');
 
   return (
-    <SafeAreaView style={styles.forgot}>
-      <ScrollView
-        contentContainerStyle={styles.forgot__scroll}
-        keyboardShouldPersistTaps="handled"
-      >
+    <ScreenLayout centered>
         {/* Header: logo + title */}
         <View style={styles.forgot__header}>
           <View style={styles.forgot__logo}>
@@ -61,7 +57,6 @@ export default function ForgotPasswordScreen() {
             <Text style={styles.forgot__footerLink}>{'Se connecter'}</Text>
           </Pressable>
         </View>
-      </ScrollView>
-    </SafeAreaView>
+    </ScreenLayout>
   );
 }

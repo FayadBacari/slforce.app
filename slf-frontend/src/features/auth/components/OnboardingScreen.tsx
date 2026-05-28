@@ -4,12 +4,12 @@ import { Colors } from '@/shared/theme/theme';
 import { useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { View, Text } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { OnboardingStep } from '@/features/auth/data/onboarding-types';
 import { useOnboardingAnswers } from '@/features/auth/hooks/useOnboardingAnswers';
 
 // import all components
 import AppButton from '@/shared/components/AppButton';
+import ScreenLayout from '@/shared/components/ScreenLayout';
 
 // import styles
 import { styles } from '@/features/auth/styles/onboarding.styles';
@@ -61,7 +61,7 @@ export default function OnboardingScreen({ steps, storageKey }: Props) {
   const handleBack = () => setStep(step - 1);
 
   return (
-    <SafeAreaView style={styles.onboarding}>
+    <ScreenLayout scroll={false}>
       {/* Progress bar */}
       <View style={styles.onboarding__progressBar}>
         <View
@@ -125,6 +125,6 @@ export default function OnboardingScreen({ steps, storageKey }: Props) {
           />
         </View>
       </View>
-    </SafeAreaView>
+    </ScreenLayout>
   );
 }

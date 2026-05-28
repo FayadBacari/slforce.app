@@ -7,6 +7,7 @@ export const Colors = {
   // Backgrounds
   background: '#FFFFFF',
   backgroundGray: '#F3F4F6',
+  inputBg: '#F8FAFF',
 
   // Text
   textPrimary: '#1A1A2E',

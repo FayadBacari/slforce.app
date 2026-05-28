@@ -4,16 +4,6 @@ import { Colors, Typography, Spacing, BorderRadius } from '@/shared/theme/theme'
 
 
 export const styles = StyleSheet.create({
-  login: {
-    flex: 1,
-    backgroundColor: Colors.background,
-  },
-  login__scroll: {
-    flexGrow: 1,
-    justifyContent: 'center',
-    padding: Spacing.xl,
-  },
-
   // --- Header (logo + title) ---
   login__header: {
     alignItems: 'center',

@@ -9,12 +9,6 @@ import Animated, {
   withSpring,
 } from 'react-native-reanimated';
 
-const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
-
-// Spring config for press animation
-const PRESS_SPRING = { damping: 15, stiffness: 300 };
-const PRESS_SCALE = 0.97;
-
 type AppButtonProps = {
   title: string;
   onPress: () => void;
@@ -22,6 +16,12 @@ type AppButtonProps = {
   loading?: boolean;
   disabled?: boolean;
 };
+
+const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
+
+// Spring config for press animation
+const PRESS_SPRING = { damping: 15, stiffness: 300 };
+const PRESS_SCALE = 0.97;
 
 
 export default function AppButton({

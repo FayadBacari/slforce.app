@@ -28,17 +28,14 @@ export const variantStyles = {
       backgroundColor: Colors.primary,
       ...Shadows.light,
     },
-    'button--pressed': { backgroundColor: Colors.primaryDark },
     button__text: { color: Colors.textWhite },
   }),
   secondary: StyleSheet.create({
     button: { backgroundColor: Colors.primaryLight },
-    'button--pressed': { backgroundColor: Colors.border },
     button__text: { color: Colors.primary },
   }),
   ghost: StyleSheet.create({
     button: { backgroundColor: 'transparent' },
-    'button--pressed': { backgroundColor: Colors.primaryLight },
     button__text: { color: Colors.primary },
   }),
 };

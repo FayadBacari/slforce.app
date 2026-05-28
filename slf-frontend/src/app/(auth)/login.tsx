@@ -2,12 +2,12 @@
 import { LOGO } from '@/shared/constants/images';
 import { router } from 'expo-router';
 import { useState } from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { View, Text, ScrollView, Pressable, Image } from 'react-native';
+import { View, Text, Pressable, Image } from 'react-native';
 
 // import all components
 import AppButton from '@/shared/components/AppButton';
 import AppTextInput from '@/shared/components/AppTextInput';
+import ScreenLayout from '@/shared/components/ScreenLayout';
 
 // import styles
 import { styles } from '@/features/auth/styles/login.styles';
@@ -18,11 +18,7 @@ export default function LoginScreen() {
   const [password, setPassword] = useState('');
 
   return (
-    <SafeAreaView style={styles.login}>
-      <ScrollView
-        contentContainerStyle={styles.login__scroll}
-        keyboardShouldPersistTaps="handled"
-      >
+    <ScreenLayout centered>
         {/* Header: logo + title */}
         <View style={styles.login__header}>
           <View style={styles.login__logo}>
@@ -78,7 +74,6 @@ export default function LoginScreen() {
             <Text style={styles.login__footerLink}>{"S'inscrire"}</Text>
           </Pressable>
         </View>
-      </ScrollView>
-    </SafeAreaView>
+    </ScreenLayout>
   );
 }
