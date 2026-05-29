@@ -9,20 +9,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: Spacing.xxl,
   },
-  roleSelect__logo: {
-    width: 120,
-    height: 120,
-    borderRadius: BorderRadius.xl,
-    backgroundColor: Colors.primary,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: Spacing.lg,
-  },
-  roleSelect__logoImage: {
-    width: 110,
-    height: 110,
-    resizeMode: 'contain',
-  },
   roleSelect__title: {
     ...Typography.h1,
     color: Colors.textPrimary,

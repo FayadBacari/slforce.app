@@ -1,6 +1,6 @@
 // import all dependencies
 import { StyleSheet } from 'react-native';
-import { Colors, Typography, Spacing, BorderRadius } from '@/shared/theme/theme';
+import { Colors, Typography, Spacing } from '@/shared/theme/theme';
 
 
 export const styles = StyleSheet.create({
@@ -9,20 +9,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: Spacing.xl,
     marginBottom: Spacing.xxl,
-  },
-  register__logo: {
-    width: 120,
-    height: 120,
-    borderRadius: BorderRadius.xl,
-    backgroundColor: Colors.primary,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: Spacing.lg,
-  },
-  register__logoImage: {
-    width: 110,
-    height: 110,
-    resizeMode: 'contain',
   },
   register__title: {
     ...Typography.h1,

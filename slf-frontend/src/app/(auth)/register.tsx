@@ -1,12 +1,12 @@
 // import all assets
-import { LOGO } from '@/shared/constants/images';
 import { useState } from 'react';
 import { router, useLocalSearchParams } from 'expo-router';
-import { View, Text, Pressable, Image } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 
 // import all components
 import AppButton from '@/shared/components/AppButton';
 import AppTextInput from '@/shared/components/AppTextInput';
+import Logo from '@/shared/components/Logo';
 import ScreenLayout from '@/shared/components/ScreenLayout';
 
 // import styles
@@ -30,12 +30,7 @@ export default function RegisterScreen() {
     <ScreenLayout>
         {/* Header: logo + title + role */}
         <View style={styles.register__header}>
-          <View style={styles.register__logo}>
-            <Image
-              source={LOGO}
-              style={styles.register__logoImage}
-            />
-          </View>
+          <Logo />
           <Text style={styles.register__title}>{'Créer un compte'}</Text>
           <Text style={styles.register__role}>{roleLabel}</Text>
         </View>

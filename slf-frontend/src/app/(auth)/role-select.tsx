@@ -1,10 +1,10 @@
 // import all dependencies
-import { LOGO } from '@/shared/constants/images';
 import { styles } from '@/features/auth/styles/role-select.styles';
 import { router } from 'expo-router';
-import { View, Text, Pressable, Image } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 
 // import all components
+import Logo from '@/shared/components/Logo';
 import ScreenLayout from '@/shared/components/ScreenLayout';
 
 export default function RoleSelectScreen() {
@@ -17,12 +17,7 @@ export default function RoleSelectScreen() {
     <ScreenLayout centered>
         {/* Header: logo + title */}
         <View style={styles.roleSelect__header}>
-          <View style={styles.roleSelect__logo}>
-            <Image
-              source={LOGO}
-              style={styles.roleSelect__logoImage}
-            />
-          </View>
+          <Logo />
           <Text style={styles.roleSelect__title}>{'Tu es...'}</Text>
           <Text style={styles.roleSelect__subtitle}>
             {'Choisis ton rôle pour personnaliser ton expérience'}

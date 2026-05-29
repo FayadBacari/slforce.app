@@ -1,12 +1,12 @@
 // import all dependencies
-import { LOGO } from '@/shared/constants/images';
 import { router } from 'expo-router';
 import { useState } from 'react';
-import { View, Text, Pressable, Image } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 
 // import all components
 import AppButton from '@/shared/components/AppButton';
 import AppTextInput from '@/shared/components/AppTextInput';
+import Logo from '@/shared/components/Logo';
 import ScreenLayout from '@/shared/components/ScreenLayout';
 
 // import styles
@@ -21,12 +21,7 @@ export default function LoginScreen() {
     <ScreenLayout centered>
         {/* Header: logo + title */}
         <View style={styles.login__header}>
-          <View style={styles.login__logo}>
-            <Image
-              source={LOGO}
-              style={styles.login__logoImage}
-            />
-          </View>
+          <Logo />
           <Text style={styles.login__title}>{'Connexion'}</Text>
           <Text style={styles.login__subtitle}>{'Contente de te revoir !'}</Text>
         </View>

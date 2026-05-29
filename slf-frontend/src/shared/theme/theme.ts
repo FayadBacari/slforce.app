@@ -28,18 +28,27 @@ export const Colors = {
   shadow: '#000000',
 } as const;
 
+// ─── FONT FAMILIES ──────────────────────────────────────────
+
+export const Fonts = {
+  regular: 'Inter_400Regular',
+  medium: 'Inter_500Medium',
+  semiBold: 'Inter_600SemiBold',
+  bold: 'Inter_700Bold',
+} as const;
+
 // ─── TYPOGRAPHY ──────────────────────────────────────────────
 
 export const Typography = {
-  h1: { fontSize: 28, fontWeight: '700' as const },
-  h2: { fontSize: 24, fontWeight: '700' as const },
-  h3: { fontSize: 20, fontWeight: '600' as const },
-  body: { fontSize: 16, fontWeight: '400' as const },
-  bodySmall: { fontSize: 14, fontWeight: '400' as const },
-  label: { fontSize: 14, fontWeight: '500' as const },
-  button: { fontSize: 16, fontWeight: '600' as const },
-  link: { fontSize: 14, fontWeight: '600' as const },
-  caption: { fontSize: 12, fontWeight: '400' as const },
+  h1: { fontSize: 28, fontFamily: Fonts.bold },
+  h2: { fontSize: 24, fontFamily: Fonts.bold },
+  h3: { fontSize: 20, fontFamily: Fonts.semiBold },
+  body: { fontSize: 16, fontFamily: Fonts.regular },
+  bodySmall: { fontSize: 14, fontFamily: Fonts.regular },
+  label: { fontSize: 14, fontFamily: Fonts.medium },
+  button: { fontSize: 16, fontFamily: Fonts.semiBold },
+  link: { fontSize: 14, fontFamily: Fonts.semiBold },
+  caption: { fontSize: 12, fontFamily: Fonts.regular },
 } as const;
 
 // ─── SPACING ─────────────────────────────────────────────────

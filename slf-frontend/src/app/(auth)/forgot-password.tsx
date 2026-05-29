@@ -1,12 +1,12 @@
 // import all dependencies
-import { LOGO } from '@/shared/constants/images';
 import { router } from 'expo-router';
 import { useState } from 'react';
-import { View, Text, Pressable, Image } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 
 // import all components
 import AppButton from '@/shared/components/AppButton';
 import AppTextInput from '@/shared/components/AppTextInput';
+import Logo from '@/shared/components/Logo';
 import ScreenLayout from '@/shared/components/ScreenLayout';
 
 // import styles
@@ -20,12 +20,7 @@ export default function ForgotPasswordScreen() {
     <ScreenLayout centered>
         {/* Header: logo + title */}
         <View style={styles.forgot__header}>
-          <View style={styles.forgot__logo}>
-            <Image
-              source={LOGO}
-              style={styles.forgot__logoImage}
-            />
-          </View>
+          <Logo />
           <Text style={styles.forgot__title}>{'Mot de passe oublié'}</Text>
           <Text style={styles.forgot__subtitle}>
             {"On t'envoie un lien de réinitialisation si ton mail existe chez nous"}

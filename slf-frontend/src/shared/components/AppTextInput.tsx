@@ -83,6 +83,11 @@ export default function AppTextInput({
       [0, 1],
       [Colors.textPlaceholder, Colors.primary],
     ),
+    backgroundColor: interpolateColor(
+      labelPosition.value,
+      [0, 1],
+      ['transparent', Colors.background],
+    ),
   }));
 
   // Animated style for shake on error

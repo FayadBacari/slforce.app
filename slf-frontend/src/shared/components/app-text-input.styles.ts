@@ -3,8 +3,8 @@ import { StyleSheet } from 'react-native';
 import { Colors, Typography, BorderRadius, Spacing } from '@/shared/theme/theme';
 
 
-// Floating label offset (moves label above the field)
-export const LABEL_OFFSET = 28;
+// Floating label offset (moves label above the field border)
+export const LABEL_OFFSET = 38;
 
 export const styles = StyleSheet.create({
   // Block — global container
@@ -37,8 +37,8 @@ export const styles = StyleSheet.create({
   // Element — floating label (positioned inside the field)
   input__label: {
     position: 'absolute',
-    left: Spacing.lg,
-    backgroundColor: 'transparent',
+    left: Spacing.md,
+    paddingHorizontal: Spacing.xs,
   },
 
   // Element — native TextInput inside
